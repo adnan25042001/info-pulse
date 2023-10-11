@@ -1,10 +1,11 @@
-const Home = () => {
-  return (
-    <div>
-      Home
-    </div>
-  )
-}
+import { categories } from "@/contants";
+import { fetchNews } from "@/lib/fetchNews";
 
-export default Home
+const Home = async () => {
+    // fetch the news data
+    // const news: NewsResponse = await fetchNews(categories.join(","));
 
+    return <div>Home Sweet /</div>;
+};
+
+export default Home;

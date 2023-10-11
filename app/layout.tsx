@@ -17,7 +17,7 @@ export default function RootLayout({
         <html lang="en">
             <body
                 suppressHydrationWarning={true}
-                className="bg-gray-200 dark:bg-zinc-900 transition-all duration-700"
+                className="bg-gray-200 transition-all duration-700"
             >
                 <Header />
                 <div className="max-w-6xl mx-auto">{children}</div>
