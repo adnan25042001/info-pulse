@@ -19,7 +19,7 @@ type Article = {
 };
 
 type NewsResponse = {
-    Pagination: Pagination;
+    pagination: Pagination;
     data: Article[];
 };
 

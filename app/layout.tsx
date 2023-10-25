@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import type { Metadata } from "next";
+import Providers from "../components/Providers";
 
 export const metadata: Metadata = {
     title: "Info Pulse",
@@ -15,13 +16,15 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body
-                suppressHydrationWarning={true}
-                className="bg-gray-200 transition-all duration-700"
-            >
-                <Header />
-                <div className="max-w-6xl mx-auto">{children}</div>
-            </body>
+            <Providers>
+                <body
+                    // suppressHydrationWarning={true}
+                    className="bg-gray-200 dark:bg-zinc-900 transition-all duration-700"
+                >
+                    <Header />
+                    <div className="max-w-6xl mx-auto">{children}</div>
+                </body>
+            </Providers>
         </html>
     );
 }
