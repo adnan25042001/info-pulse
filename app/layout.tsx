@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import "./globals.css";
-import type { Metadata } from "next";
-import Providers from "../components/Providers";
+import Providers from "./Providers";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Info Pulse",
@@ -15,16 +15,16 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
-            <Providers>
-                <body
-                    // suppressHydrationWarning={true}
-                    className="bg-gray-200 dark:bg-zinc-900 transition-all duration-700"
-                >
+        <html suppressHydrationWarning={true}>
+            <body
+                suppressHydrationWarning={true}
+                className="bg-gray-200 dark:bg-zinc-900 transition-all duration-300"
+            >
+                <Providers>
                     <Header />
-                    <div className="max-w-6xl mx-auto">{children}</div>
-                </body>
-            </Providers>
+                    <div className="max-w-6xl mx-auto p-6 xs:p-6 sm:p-10">{children}</div>
+                </Providers>
+            </body>
         </html>
     );
 }

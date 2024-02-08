@@ -51,12 +51,12 @@ export const fetchNews = async (
             next: isDynamic ? { revalidate: 0 } : { revalidate: 20 },
             headers: {
                 "Content-Type": "application/json",
-                Authorization: `Apikey ${process.env.NEXT_PUBLIC_STEPZEN_API_KEY}`,
+                Authorization: `Apikey ${process.env.STEPZEN_API_KEY}`,
             },
             body: JSON.stringify({
                 query,
                 variables: {
-                    access_key: process.env.NEXT_PUBLIC_MEDIASTACK_API_KEY,
+                    access_key: process.env.MEDIASTACK_API_KEY,
                     categories: category,
                     keywords: keywords,
                 },
@@ -73,4 +73,4 @@ export const fetchNews = async (
     return news;
 };
 
-// stepzen import curl "http://api.mediastack.com/v1/news?access_key=1f377f841252c6ec21f7f13b2070fdf2"
+//stepzen import curl "http://api.mediastack.com/v1/news?access_key=${media_stack_api_key}"
