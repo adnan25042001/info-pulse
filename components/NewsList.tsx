@@ -6,7 +6,11 @@ type Props = {
 
 const NewsList = ({ news }: Props) => {
     if (!news) {
-        return null;
+        return (
+            <div className="animate-pulse font-serif text-lg text-gray-400 text-center p-10">
+                Loading News Feed...
+            </div>
+        );
     }
 
     return (
