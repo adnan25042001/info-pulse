@@ -7,7 +7,7 @@
         @apply hover:underline decoration-orange-500 text-center decoration-2 active:underline underline-offset-8 rounded-full p-4 cursor-pointer hover:font-bold capitalize transition-all duration-200;
     }
 
-    .headerTitle{
-        @apply text-4xl font-serif capitalize pt-5 underline decoration-orange-400 decoration-2 underline-offset-4 decoration-double
+    .headerTitle {
+        @apply text-xl xs:text-2xl md:text-3xl font-serif capitalize pt-5 underline decoration-orange-500 decoration-2 underline-offset-4 decoration-double;
     }
 }
