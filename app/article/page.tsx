@@ -19,9 +19,9 @@ const ArticlePage = ({ searchParams }: Props) => {
             <section className="flex flex-col lg:flex-row pb-24 px-0 lg:px-10">
                 {article.image && (
                     <img
+                        className="h-50 max-w-[90%] mx-auto md:max-w-md lg:max-w-sm object-cover rounded-lg shadow-md"
                         src={article.image}
                         alt={article.title}
-                        className="h-50 max-w-[85%] mx-auto md:max-w-lg lg:max-w-xl object-cover rounded-lg shadow-md"
                     />
                 )}
 
@@ -31,9 +31,9 @@ const ArticlePage = ({ searchParams }: Props) => {
                     </h1>
 
                     <div className="flex divide-x-2 divide-black dark:divide-white space-x-4">
-                        <h1 className="font-bold">
+                        <h2 className="font-bold">
                             By: {article.auther || "Unknown"}
-                        </h1>
+                        </h2>
                         <h2 className="font-bold pl-4">
                             Source: {article.source || "Unknown"}
                         </h2>
