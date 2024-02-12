@@ -22,7 +22,7 @@ export default function RootLayout({
             >
                 <Providers>
                     <Header />
-                    <div className="max-w-6xl mx-auto">{children}</div>
+                    <div className="max-w-6xl mx-auto px-3">{children}</div>
                 </Providers>
             </body>
         </html>

@@ -4,7 +4,7 @@
 
 @layer components {
     .navLink {
-        @apply hover:underline decoration-orange-500 text-center decoration-2 active:underline underline-offset-8 rounded-full p-4 cursor-pointer hover:font-bold capitalize hover:scale-110 transition-all duration-200;
+        @apply hover:underline decoration-orange-500 text-center decoration-2 active:underline underline-offset-8 rounded-full p-4 cursor-pointer hover:font-bold capitalize transition-all duration-200;
     }
 
     .headerTitle{

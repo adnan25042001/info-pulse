@@ -7,28 +7,16 @@ import DarkModeButton from "./DarkModeButton";
 
 const Header = () => {
     return (
-        <header>
-            <div className="grid grid-cols-3 p-10 items-center">
-                <Bars3Icon className="h-8 w-8 cursor-pointer" />
-
+        <header className="max-w-6xl mx-auto px-3">
+            <div className="flex py-10 items-center justify-between">
                 <Link href="/" prefetch={false}>
-                    <h1 className="font-serif text-4xl text-center">
-                        The{" "}
-                        <span className="underline decoration-4 decoration-orange-500">
-                            InfoPulse
-                        </span>{" "}
-                        News
+                    <h1 className="font-serif text-4xl text-center underline decoration-4 decoration-orange-500">
+                        InfoPulse
                     </h1>
                 </Link>
 
-                <div className="flex items-center justify-end space-x-2">
-                    {/* Dark mode button */}
-                    <DarkModeButton />
-
-                    <button className="hidden md:inline bg-slate-900 hover:bg-slate-800 text-white px-4 lg:px-8 py-2 lg:py-4 rounded-full dark:bg-slate-800 dark:hover:bg-slate-900 transition-all duration-300">
-                        Subscribe Now
-                    </button>
-                </div>
+                {/* Dark mode button */}
+                <DarkModeButton />
             </div>
 
             {/* Nav links */}

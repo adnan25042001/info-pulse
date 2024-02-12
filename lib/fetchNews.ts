@@ -66,11 +66,9 @@ export const fetchNews = async (
 
     const newsResponse = await res.json();
 
-    console.log(newsResponse);
-
     let news = null;
 
-    if (newsResponse) {
+    if (newsResponse.data.myQuery) {
         // sort function by images vs not images present
         news = sortNewsByImage(newsResponse.data.myQuery);
     }
